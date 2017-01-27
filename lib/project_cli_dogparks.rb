@@ -1,5 +1,2 @@
-require "project_cli_dogparks/version"
-
-module ProjectCliDogparks
-  # Your code goes here...
-end
+require_relative "./project_cli_dogparks/version"
+require_relative "./project_cli_dogparks/cli"
