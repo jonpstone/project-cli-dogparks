@@ -16,3 +16,9 @@ The pond is now open for your furry friends to enjoy!
 Closed on rainy days and on Tuesdays for maintenance.
 
 Fun Fact: This unique K-9 haven is the largest of its kind in North Texas. It features a doggy lake, showers and pavilion."
+
+A dog park has...
+
+1. Name.
+2. Location.
+3. Description
