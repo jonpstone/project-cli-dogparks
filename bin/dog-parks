@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
-require './lib/project_cli_dogparks'
+require "bundler/setup"
+require "project_cli_dogparks"
 
 ProjectCliDogparks::CLI.new.call

@@ -21,4 +21,4 @@ A dog park has...
 
 1. Name.
 2. Location.
-3. Description
+3. Description.
