@@ -1,4 +1,5 @@
 class ProjectCliDogparks::CLI
+  #Class to manage the structure and flow of the gem.
 
   def call
     list_parks
@@ -10,7 +11,7 @@ class ProjectCliDogparks::CLI
     puts "Welcome to the Plano area Dog Parks gem!"
     @park = ProjectCliDogparks::Park.all
     @park.each_with_index do |park, i|
-      puts "#{i+1}. #{park.name} - #{park.location}"
+      puts "#{i+1}. #{park.name} - #{park.city}"
     end
   end
 
@@ -19,8 +20,17 @@ class ProjectCliDogparks::CLI
     while input != "exit"
       puts "Please make a selection or type 'exit' to leave or 'menu' to return to the list."
       input = gets.strip.downcase
+
       if input.to_i > 0
-        puts @park[input.to_i-1]
+        user_park = @park[input.to_i-1]
+        puts <<~EOF
+
+          #{user_park.name}\n
+          #{user_park.location}\n
+          #{user_park.description}\n
+          #{user_park.url}
+
+          EOF
       elsif input == "menu"
         list_parks
       else
