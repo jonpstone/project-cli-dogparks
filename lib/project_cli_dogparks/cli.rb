@@ -1,5 +1,5 @@
 class ProjectCliDogparks::CLI
-  #Class to manage the structure and flow of the gem.
+  # Class to manage the structure and flow of the gem.
 
   def call
     list_parks
@@ -30,7 +30,7 @@ class ProjectCliDogparks::CLI
           #{user_park.description}\n
           #{user_park.url}
 
-          EOF
+        EOF
       elsif input == "menu"
         list_parks
       else
