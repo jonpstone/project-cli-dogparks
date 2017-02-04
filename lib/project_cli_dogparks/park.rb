@@ -29,29 +29,11 @@ class ProjectCliDogparks::Park
     location_zip = doc.search('span.postal-code').text
     location = "#{location_street} " + "#{location_city_state} " + "#{location_zip}"
 
-    # The .description atribute really hurt my head, a huge chunk of code on the plano.gov was not...
-    # placed inside an element, so for now I have hardcoded it into a heredoc.
-    para1 = doc.search('font.Headline').text.strip
-    para2 = <<~EOF
-      The dog park is a double-gated, fenced, 2-acre area along Bluebonnet Trail,\n
-      near its intersection with Chisholm Trail in central Plano. The park features\n
-      a separate area for large and small dogs with shade shelters, picnic tables,\n
-      benches. LED lighting, water stations for humans and dogs, waste pickup/disposal\n
-      stations and a dog rinse station near the parking lot.
-    EOF
-    para3 =
-    para4 =
-    para5 =
+    # The .description isn't perfect yet.
+    description = doc.search('div.editorContent').text.gsub(/\s/, ' ')
 
-    description = <<~EOF
-
-      #{para1}\n
-      #{para2}\n
-      #{para3}\n
-      #{para4}\n
-      #{para5}
-
-    EOF
+    # Hard coded for now.
+    url = "http://www.plano.gov/Facilities/Facility/Details/Dog-Park-at-Jack-Carter-Park-29"
 
     binding.pry
   end
